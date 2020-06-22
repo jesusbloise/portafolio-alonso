@@ -1,2 +1,1 @@
 # portafolio 
-archiuvos del  portafolio
