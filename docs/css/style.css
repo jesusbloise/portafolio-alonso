@@ -343,7 +343,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .contenido .intro {
-    margin-top: 50%;
+    margin-top: 40%;
     width: 70%;
     padding-left: 10px;
   }
