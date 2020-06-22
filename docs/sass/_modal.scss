@@ -37,18 +37,14 @@
   }
   ul {
     margin: 50px 0;
-    @include phone {
-        display: none;
-    }
     li {
       display: inline;
-      a {
-        color: $coloNegro;
+      @include subtitulo(left,16px, 300, uppercase);
+      color: #585858;
+      letter-spacing: 0.3em;
+      @include phone {
+        display: block;
         font-size: 14px;
-        margin: 0 15px;
-        &:hover {
-          text-decoration: none;
-        }
       }
     }
   }
