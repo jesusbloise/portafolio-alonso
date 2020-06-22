@@ -1,0 +1,35 @@
+.hola {
+  @include justify-center(flex-end);
+  align-items: flex-end !important;
+  .descripcion {
+    .texto {
+      h4 {
+        @include subtitulo(right, 25px, bold, uppercase);
+        @include phone {
+          font-size: 20px;
+        }
+      }
+      h5 {
+        @include subtitulo(right, 16px, 300, uppercase);
+        margin: 5px 0;
+      }
+    }
+  }
+}
+.images {
+  @include justify-center(center);
+  .imagen_experiencia {
+    width: 90% !important;
+    margin: 0 auto;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include phone {
+      width: 100% !important;
+      margin: 50px auto;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.rs {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  z-index:300;
+  // width: 40%;
+  // media query
+  // @include tablet {
+  //   right: 0px;
+  //   bottom: 0px;
+  // }
+  @include tablet {
+    left: 30px;
+  }
+  @include phone {
+    top:30px;
+    left: 0px;
+  }
+  ul {
+    display: flex !important;
+    // justify-content: center;
+    @include tablet {
+     display: block !important;
+    }
+  }
+  .images {
+    @include images(10px, block);
+    font-size: 14px;
+    @include phone {
+      font-size: 18px;
+    }
+    .images_item {
+      @include images_item(#000000);
+      @include justify-content;
+      &:hover {
+        @include images_item_hover;
+        .images_info {
+          @include images_info_two;
+        }
+      }
+    }
+  }
+  .images_info {
+    @include images_info(#000000);
+    .o {
+      a {
+        color: #F8D332 !important;
+        font-size: 20px;
+      }
+    }
+  }
+  // .linkedin {
+  //   background-color: #2774b2;
+  // }
+  // .whatsapp {
+  //   background-color: #71d845;
+  // }
+  // .behance {
+  //   background-color: #3992c8;
+  // }
+  // .email {
+  //   background-color: #db1515;
+  // }
+}

@@ -1,0 +1,232 @@
+/////////////////////
+@mixin align-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+@mixin align-content-flex-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+@mixin align-items {
+  display: flex;
+  align-items: center;
+}
+@mixin justify-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin space-between($align) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align;
+}
+
+@mixin subtitulo($text-align, $size, $weight, $text-transform) {
+  text-align: $text-align;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $text-transform;
+}
+@mixin images($margin, $display) {
+  width: 50px;
+  height: 50px;
+  display: $display;
+  margin: $margin;
+  // background-color: $fondo;
+}
+
+@mixin images_item($color) {
+  width: 100%;
+  // background-color: yellow;
+  color: $color;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+@mixin images_item_hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+@mixin images_info_two {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+@mixin images_info($fondo) {
+  position: absolute;
+  // background: linear-gradient(45deg, #DB4758 0%, #A43382 100%);
+  background-color: $fondo;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+}
+/******************************************/
+
+//// mixins limpios //////////////
+
+// alto y ancho
+@mixin altoAncho($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/// media query
+@mixin phone {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+/// buttons
+
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}
+
+@mixin buttons {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none !important;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+}
+
+@mixin button-text($colorTexto) {
+  position: absolute;
+  color: $colorTexto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin circle_button($colorFondo) {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: $colorFondo;
+  border-radius: 1.625rem;
+}
+
+@mixin icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin arrowIcon {
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+@mixin arrowBefore {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+///// centar elementos
+
+@mixin justify-center($center) {
+  display: flex;
+  justify-content: $center;
+  align-items: center;
+}
+
+///// text
+
+@mixin textVertical {
+  -webkit-writing-mode: vertical-rl;
+  margin: auto;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  overflow: hidden;
+  transform: rotate(180deg);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+@mixin text-decoration-line ($color ) {
+  text-decoration-line: line-through;
+  -moz-text-decoration-line: line-through;
+  color: $color;
+  // font-weight: 300;
+}
+
+
+//////// nt-child
+
+// @mixin has-nth() {
+//   &:nth-child(2n+1);
+//   color: blue;
+// }
+
+
+@mixin last-child() {
+  &:last-of-type {
+    @content;
+  }
+}

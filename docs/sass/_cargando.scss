@@ -1,0 +1,92 @@
+.content{
+  @include altoAncho (100%, 100%);
+  @include justify-content;
+  background: #ffffff;
+  text-align: center;
+  left: 0;
+  top: 0;
+  position: fixed;
+  transition:all .3s ease;
+  z-index: 25000;
+}
+//opcion 
+.spinner {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:5px solid black;
+  background:transparent;
+  border-top-color:#efef;
+  border-bottom-color: #efef;
+  border-left-color: black;
+  animation:spin 1.5s linear infinite;
+  position:relative;
+}
+
+@keyframes spin{
+  0%{
+    background:transparent;
+    transform: rotate(720deg); 
+  }
+
+}
+
+
+// opcion 2 
+// #container {
+//   @include altoAncho (70px, 35px);
+//   overflow: hidden;
+//   position: absolute;
+//   top: calc(50% - 17px);
+//   left: calc(50% - 35px);
+// }
+// #loader {
+//   @include altoAncho (70px, 70px);
+//   border-style: solid;
+//   border-top-color: $colorRojo;
+//   border-right-color: $colorRojo;
+//   border-left-color: transparent;
+//   border-bottom-color: transparent;
+//   border-radius: 50%;
+//   box-sizing: border-box;
+//   animation: rotate 3s ease-in-out infinite;
+//   transform: rotate(-200deg);
+//   -webkit-transform: rotate(-200deg);
+//   -moz-transform: rotate(-200deg);
+//   -ms-transform: rotate(-200deg);
+//   -o-transform: rotate(-200deg);
+// }
+// @keyframes rotate {
+//   0% { border-width: 10px; }
+//   25% { border-width: 3px; }
+//   50% { 
+//     transform: rotate(115deg); 
+//     border-width: 10px;
+//   }
+//   75% { border-width: 3px;}
+//   100% { border-width: 10px;}
+// }
+
+
+////// opcion 3 
+
+// h1 {
+//   position: relative;
+//   color: rgba(0, 0, 0, .3);
+//   font-size: 5em
+// }
+// h1:before {
+//   content: attr(data-text);
+//   position: absolute;
+//   overflow: hidden;
+//   max-width: 7em;
+//   white-space: nowrap;
+//   color: blue;
+//   animation: loading 3s linear;
+//   -webkit-animation: loading 3s linear;
+// }
+// @keyframes loading {
+//   0% {
+//       max-width: 0;
+//   }
+// }

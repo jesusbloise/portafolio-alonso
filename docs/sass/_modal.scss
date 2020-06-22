@@ -1,0 +1,68 @@
+.modal-header {
+  border-bottom: 0 !important;
+  position: relative;
+  .title_modal {
+    margin-top: 50px;
+    h2 {
+      @include subtitulo(left, 50px, bold, uppercase);
+      text-decoration-line: line-through;
+    }
+    h3 {
+      @include subtitulo(left, 30px, 300, uppercase);
+    }
+    p {
+      @include subtitulo(left, 16px, 300, uppercase);
+    }
+  }
+
+  .close {
+    @include subtitulo(right, 60px, 300, uppercase);
+    color: red !important;
+    margin-right: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.modal-body {
+  .images_modal {
+    width: 100%;
+    @include phone {
+        margin: 30px 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    margin: 50px 0;
+    @include phone {
+        display: none;
+    }
+    li {
+      display: inline;
+      a {
+        color: $coloNegro;
+        font-size: 14px;
+        margin: 0 15px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.badge {
+  padding: 10px 20px;
+  margin-left: 15px;
+}
+
+.flex-end {
+  @include justify-center(flex-end);
+  @include tablet {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+}

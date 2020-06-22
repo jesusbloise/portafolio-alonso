@@ -1,0 +1,55 @@
+button {
+  @include buttons();
+  &.learn-more {
+    @include altoAncho( 12rem, auto);
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      @include circle_button (#007bff);
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        @include icon();
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          @include arrowIcon ();
+          &::before {
+            @include arrowBefore();
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      @include button-text (#585858);
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: #fff;
+    }
+  }
+}
+ .button__portada {
+  //  margin-top: 30%;
+background-color: yellowgreen;
+//   // text-align: center;
+//   // button {
+//   //   @include buttons();
+//   //   &.learn-more {
+//   //     @include altoAncho( 13rem, auto);
+//   //     .circle {
+//   //       @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+//   //       @include circle_button (#007bff);
+       
+//   //     }
+//   //   }
+//   // }
+ }

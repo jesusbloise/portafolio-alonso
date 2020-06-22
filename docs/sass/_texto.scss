@@ -1,0 +1,37 @@
+.text {
+    p {
+      @include subtitulo(left, 18px, 300, inherit );
+      line-height: 30px;
+      margin-bottom: 20px;
+      @include phone {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+    h3 {
+        @include subtitulo(left, 18px, 500, uppercase );
+    }
+}
+
+
+.margin {
+  margin-top: 50px;
+  @include tablet {
+    margin-top: 100px;
+  }
+  @include phone {
+    margin-top: 150px;
+    margin-bottom: 130px;
+  }
+}
+.margin-bottom {
+  margin-bottom: 0;
+  @include phone {
+    margin-bottom: 130px;
+  }
+}
+
+
+.container {
+  padding: 0 20px;
+}
