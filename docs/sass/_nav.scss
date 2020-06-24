@@ -101,7 +101,7 @@ nav {
       padding-bottom: 10px;
       letter-spacing: 3px;
       @include subtitulo(right, 12px, 300, uppercase);
-      // font-weight: bold;
+      font-weight: bold;
       @include last-child()
       {
         padding: 0;

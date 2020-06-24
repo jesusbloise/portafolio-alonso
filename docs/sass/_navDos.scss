@@ -10,7 +10,7 @@
   overflow: hidden;
   z-index: 999;
   &.open {
-    opacity: 0.9;
+    opacity: 1;
     visibility: visible;
     height: 100%;
     li {
@@ -32,7 +32,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    @include subtitulo(center, 30px, bold, uppercase);
+    @include subtitulo(center, 25px, bold, uppercase);
   }
   ul {
     height: 100%;
@@ -83,9 +83,9 @@
   }
 
   span {
-    @include altoAncho (45px,4px);
+    @include altoAncho (40px,4px);
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border-radius: 10px;
     background-color: #000000;
     position: relative;
